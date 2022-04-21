@@ -13,7 +13,14 @@
     </div>
   </nav>
 </div>
-
+<div class="pagination-wrap">
+  <pagination-controls
+    previousLabel="Précédent"
+    nextLabel="Suivant"
+    (pageChange)="oneDataChange($event)"
+  >
+  </pagination-controls>
+</div>
 <article class="post vt-post"
          *ngFor="let art of articles
          | filter: filterTerm
@@ -49,12 +56,3 @@
     </div>
   </div>
 </article>
-
-<div class="pagination-wrap">
-  <pagination-controls
-    previousLabel="Précédent"
-    nextLabel="Suivant"
-    (pageChange)="oneDataChange($event)"
-  >
-  </pagination-controls>
-</div>
