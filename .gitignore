@@ -3,4 +3,5 @@
 
 # Miscellaneous
 /.angular
+/.angular/cache
 /node_modules
