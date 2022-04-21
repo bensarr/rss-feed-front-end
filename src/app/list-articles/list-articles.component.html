@@ -1,0 +1,60 @@
+<div class=" container card-header">
+  <h1>Actualités à la une</h1>
+</div>
+<div class="container">
+  <nav class="navbar-light bg-light">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Saisissez un mot clé de l'article à rechercher..."
+        [(ngModel)]="filterTerm"
+      />
+    </div>
+  </nav>
+</div>
+
+<article class="post vt-post"
+         *ngFor="let art of articles
+         | filter: filterTerm
+         | paginate
+         : {
+         itemsPerPage: tableSize,
+         currentPage: page,
+         totalItems: count
+         };
+         let i = index"
+>
+  <div class="row">
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+      <div class="post-type post-img">
+        <a href="#"><img src="{{art.media['$']['url']}}" class="img-responsive" alt="image post"></a>
+      </div>
+      <div class="author-info author-info-2">
+        <ul class="list-inline">
+          <li>
+            <div class="info">
+              <p>Publié le</p>
+              <strong>{{art.date | date:"short":"":"fr"}}</strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+      <div class="caption">
+        <h3 class="md-heading">{{art.title}}</h3>
+        <p>{{art.description}}</p>
+        <a class="btn btn-default btn-outline-primary" href="{{art.link}}" target="_blank" role="button">Voir Plus</a> </div>
+    </div>
+  </div>
+</article>
+
+<div class="pagination-wrap">
+  <pagination-controls
+    previousLabel="Précédent"
+    nextLabel="Suivant"
+    (pageChange)="oneDataChange($event)"
+  >
+  </pagination-controls>
+</div>
