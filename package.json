@@ -2,7 +2,8 @@
   "name": "rss-feed-reader-font",
   "version": "0.0.0",
   "scripts": {
-    "start": "node server.js",
+    "ng": "ng",
+    "start": "ng serve",
     "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
