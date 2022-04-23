@@ -12,6 +12,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SliderComponent } from './slider/slider.component';
+import { CreateArticleComponent } from './create-article/create-article.component';
+import { HomeComponent } from './home/home.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -20,6 +22,8 @@ registerLocaleData(localeFr);
     ListArticlesComponent,
     NavBarComponent,
     SliderComponent,
+    CreateArticleComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -465,3 +465,7 @@ blockquote {
   line-height: 36px !important;
   margin-bottom: 15px !important;
 }
+
+.modifier{
+  margin-left: 5%;
+}

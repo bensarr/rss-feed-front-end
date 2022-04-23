@@ -1,4 +1,5 @@
 export class Article {
+  id: number;
   title: string;
   description: string;
   link: string;
@@ -6,6 +7,7 @@ export class Article {
   media: any;
 
   constructor() {
+    this.id = 0;
     this.title = '';
     this.description = '';
     this.link = '';

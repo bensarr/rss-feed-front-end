@@ -52,7 +52,9 @@
       <div class="caption">
         <h3 class="md-heading">{{art.title}}</h3>
         <p>{{art.description}}</p>
-        <a class="btn btn-default btn-outline-primary" href="{{art.link}}" target="_blank" role="button">Voir Plus</a> </div>
+        <a class="btn btn-default btn-outline-primary" href="{{art.link}}" target="_blank" role="button">Voir Plus</a>
+        <a class="btn btn-default btn-outline-secondary modifier" [routerLink]="['create-article', art.id?art.id:0, art.link]" role="button">Modifier</a>
+      </div>
     </div>
   </div>
 </article>

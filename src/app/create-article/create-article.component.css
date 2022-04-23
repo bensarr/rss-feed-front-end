@@ -1,0 +1,13 @@
+.card{
+  margin-top: 40px;
+}
+.row{
+  margin-bottom: 20px;
+  justify-content: center;
+}
+button{
+  max-width: 150px;
+}
+textarea{
+  width: 100%;
+}
